@@ -9,9 +9,42 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var precoBitcoins: UILabel!
+    
+    @IBOutlet weak var botaoAtualizar: UIButton!
+    
+    @IBAction func atualizarPreco(_ sender: Any) {
+        
+        self.recuperarPrecoBitcoin()
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.recuperarPrecoBitcoin()
+        
+    }
+    
+    func formatarPreco(preco: NSNumber) -> String{
+        
+        let nf = NumberFormatter()
+        nf.numberStyle = .decimal
+        nf.locale = Locale(identifier: "pt_BR")
+        
+        if let precoFinal = nf.string(from: preco){
+            return precoFinal
+        }else{
+            return "0,00"
+        }
+        
+    }
+    
+    func recuperarPrecoBitcoin(){
+        
+        //atualizar texto botao
+        self.botaoAtualizar.setTitle("Atualizando...", for: .normal)
         
         if let url = URL(string: "https://blockchain.info/pt/ticker") {
             let tarefa = URLSession.shared.dataTask(with: url) { (dados, requisicao, erro) in
@@ -27,7 +60,14 @@ class ViewController: UIViewController {
                                     
                                     if let preco = brl["buy"] as? Double {
                                         
-                                        print(preco)
+                                        let precoFormatado = self.formatarPreco(preco: NSNumber(value: preco))
+                                        
+                                        DispatchQueue.main.async(execute: {
+                                            
+                                            self.precoBitcoins.text = "R$ " + precoFormatado
+                                            self.botaoAtualizar.setTitle("Atualizar", for: .normal)
+                                            
+                                        })
                                     }
                                 }
                             }
@@ -41,8 +81,6 @@ class ViewController: UIViewController {
             }
             tarefa.resume()
         }
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
