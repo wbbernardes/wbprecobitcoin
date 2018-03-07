@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80CA8229CB9DE71702EF364C /* Pods_preco_do_bitcoin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136BB5E45865D912A011502F /* Pods_preco_do_bitcoin.framework */; };
 		B10DF73F204F1D700013808E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10DF73E204F1D700013808E /* AppDelegate.swift */; };
 		B10DF741204F1D700013808E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10DF740204F1D700013808E /* ViewController.swift */; };
 		B10DF744204F1D700013808E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B10DF742204F1D700013808E /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		136BB5E45865D912A011502F /* Pods_preco_do_bitcoin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_preco_do_bitcoin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82C373511775EB1E871637A6 /* Pods-preco do bitcoin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-preco do bitcoin.release.xcconfig"; path = "Pods/Target Support Files/Pods-preco do bitcoin/Pods-preco do bitcoin.release.xcconfig"; sourceTree = "<group>"; };
 		B10DF73B204F1D700013808E /* preco do bitcoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "preco do bitcoin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B10DF73E204F1D700013808E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B10DF740204F1D700013808E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,8 @@
 		B10DF745204F1D700013808E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B10DF748204F1D700013808E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B10DF74A204F1D700013808E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B175ED0A20508B610017E90D /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEF7D018EC0490D8E541C311 /* Pods-preco do bitcoin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-preco do bitcoin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-preco do bitcoin/Pods-preco do bitcoin.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +34,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80CA8229CB9DE71702EF364C /* Pods_preco_do_bitcoin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03B598FC1F894A576C5D514C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FEF7D018EC0490D8E541C311 /* Pods-preco do bitcoin.debug.xcconfig */,
+				82C373511775EB1E871637A6 /* Pods-preco do bitcoin.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7A2E4EE12A04A64A62B4BD48 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B175ED0A20508B610017E90D /* Alamofire.framework */,
+				136BB5E45865D912A011502F /* Pods_preco_do_bitcoin.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B10DF732204F1D700013808E = {
 			isa = PBXGroup;
 			children = (
 				B10DF73D204F1D700013808E /* preco do bitcoin */,
 				B10DF73C204F1D700013808E /* Products */,
+				03B598FC1F894A576C5D514C /* Pods */,
+				7A2E4EE12A04A64A62B4BD48 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +97,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B10DF74D204F1D700013808E /* Build configuration list for PBXNativeTarget "preco do bitcoin" */;
 			buildPhases = (
+				DED97855AAADAFEEAA8741CA /* [CP] Check Pods Manifest.lock */,
 				B10DF737204F1D700013808E /* Sources */,
 				B10DF738204F1D700013808E /* Frameworks */,
 				B10DF739204F1D700013808E /* Resources */,
+				9E8A1AB94CBD4A0A835DE2C3 /* [CP] Embed Pods Frameworks */,
+				A446E97886BA1CC17E89EA0E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +159,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9E8A1AB94CBD4A0A835DE2C3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-preco do bitcoin/Pods-preco do bitcoin-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-preco do bitcoin/Pods-preco do bitcoin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A446E97886BA1CC17E89EA0E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-preco do bitcoin/Pods-preco do bitcoin-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DED97855AAADAFEEAA8741CA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-preco do bitcoin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B10DF737204F1D700013808E /* Sources */ = {
@@ -272,6 +355,7 @@
 		};
 		B10DF74E204F1D700013808E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEF7D018EC0490D8E541C311 /* Pods-preco do bitcoin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +371,7 @@
 		};
 		B10DF74F204F1D700013808E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82C373511775EB1E871637A6 /* Pods-preco do bitcoin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

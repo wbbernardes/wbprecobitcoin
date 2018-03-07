@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
     
@@ -20,10 +21,13 @@ class ViewController: UIViewController {
         
     }
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.recuperarPrecoBitcoin()
+        
         
     }
     
@@ -45,6 +49,15 @@ class ViewController: UIViewController {
         
         //atualizar texto botao
         self.botaoAtualizar.setTitle("Atualizando...", for: .normal)
+        
+        
+        Alamofire.request("https://blockchain.info/pt/ticker").responseJSON { (response) in
+            if let json = response.result.value as? AnyObject {
+                if let brl = json["BRL"] as? [String: Any] {
+                    print(brl)
+                }
+            }
+        }
         
         if let url = URL(string: "https://blockchain.info/pt/ticker") {
             let tarefa = URLSession.shared.dataTask(with: url) { (dados, requisicao, erro) in
