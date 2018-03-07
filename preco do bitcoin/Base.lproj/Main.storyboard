@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,10 +29,6 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bitcoin" translatesAutoresizingMaskIntoConstraints="NO" id="Vrs-pm-ElE">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="169"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="343" id="d6T-g1-U5J"/>
-                                            <constraint firstAttribute="height" constant="169" id="sbd-c4-u10"/>
-                                        </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 0,00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgq-IE-5zn">
                                         <rect key="frame" x="0.0" y="169" width="343" height="54"/>
@@ -49,23 +46,16 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="MqT-hx-ioQ" firstAttribute="top" secondItem="hgq-IE-5zn" secondAttribute="bottom" id="I8Q-Cd-5jW"/>
-                                    <constraint firstItem="MqT-hx-ioQ" firstAttribute="top" secondItem="hgq-IE-5zn" secondAttribute="bottom" constant="8" id="KG7-Gs-hf9"/>
-                                    <constraint firstItem="MqT-hx-ioQ" firstAttribute="leading" secondItem="fwk-yr-9jS" secondAttribute="leading" id="M1M-Rp-SaF"/>
-                                    <constraint firstAttribute="trailing" secondItem="MqT-hx-ioQ" secondAttribute="trailing" id="SBd-He-mnv"/>
-                                    <constraint firstAttribute="bottom" secondItem="MqT-hx-ioQ" secondAttribute="bottom" constant="8" id="gYh-mB-PFa"/>
-                                    <constraint firstItem="hgq-IE-5zn" firstAttribute="leading" secondItem="fwk-yr-9jS" secondAttribute="leading" id="ngX-3y-BK4"/>
-                                    <constraint firstItem="hgq-IE-5zn" firstAttribute="top" secondItem="Vrs-pm-ElE" secondAttribute="bottom" constant="8" id="pDD-2V-dam"/>
-                                    <constraint firstAttribute="trailing" secondItem="hgq-IE-5zn" secondAttribute="trailing" id="zH9-43-F3j"/>
+                                    <constraint firstItem="hgq-IE-5zn" firstAttribute="trailing" secondItem="MqT-hx-ioQ" secondAttribute="trailing" id="BJl-Ol-cmE"/>
+                                    <constraint firstItem="Vrs-pm-ElE" firstAttribute="trailing" secondItem="hgq-IE-5zn" secondAttribute="trailing" id="MrK-W4-gSv"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fwk-yr-9jS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AV0-xU-CMK"/>
-                            <constraint firstItem="fwk-yr-9jS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IMi-nm-I9b"/>
-                            <constraint firstAttribute="trailing" secondItem="fwk-yr-9jS" secondAttribute="trailing" constant="16" id="PJ0-7X-e5D"/>
-                            <constraint firstItem="fwk-yr-9jS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="Vc0-p6-B0m"/>
+                            <constraint firstItem="fwk-yr-9jS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="DJx-MM-aOv"/>
+                            <constraint firstItem="fwk-yr-9jS" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="VqX-Jn-Id0"/>
+                            <constraint firstItem="fwk-yr-9jS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="g7g-7b-ndC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
